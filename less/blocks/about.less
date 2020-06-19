@@ -1,0 +1,110 @@
+.about {
+  padding-top: 110px;
+  padding-bottom: 110px;
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.about__wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.about__pic {
+  width: 432px;
+  position: relative;
+  
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 608px;
+    height: 473px;
+    background-image: url(../img/icons/deco-circle.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    opacity: 0.3;
+  }
+}
+
+.about__info {
+  width: ~"calc(100% - 486px)";
+  
+  .title {
+    margin-top: 0;
+    margin-bottom: 20px;
+    text-align: left;
+  }
+}
+
+.about__list {
+  .reset();
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+.about__item {
+  display: flex;
+  align-items: center;
+  margin-right: 40px;
+}
+
+.about__digit {
+  margin: 0;
+  margin-right: 7px;
+  font-weight: 800;
+  font-size: 36px;
+  line-height: 1;
+  color: #D9B300;
+}
+
+.about__name {
+  margin: 0;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1;
+}
+
+.about__text {
+  max-width: 500px;
+  margin-bottom: 55px;
+}
+
+.about__slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 289px;
+  border-radius: 20px;
+  box-sizing: border-box;
+  overflow: hidden;
+  
+  img {
+    display: block;
+    flex: 0 0 auto;
+    min-height: 100%;
+  }
+}
+
+.about__prev,
+.about__next {
+  bottom: 20px;
+  top: auto;
+  width: 40px;
+  height: 40px;
+  opacity: 0.7;
+  background-size: 8px 12px;
+}
+
+.about__prev {
+  left: 20px;
+}
+
+.about__next {
+  right: auto;
+  left: 70px;
+}
