@@ -1,0 +1,89 @@
+.promo {
+  position: relative;
+}
+
+.promo__slide {
+  height: 512px;
+  padding-top: 60px;
+  overflow: hidden;
+  box-sizing: border-box;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.promo__info {
+  max-width: 420px;
+}
+
+.promo__title {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-family: 'Merriweather', serif;
+  font-style: italic;
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.2;
+  
+  span {
+    color: @red;
+  }
+}
+
+.promo__subtitle {
+  max-width: 330px;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.2;
+}
+
+.promo__btn {
+  margin-top: 55px;
+}
+
+.promo__pagination {
+  left: ~"calc(50% - 585px)";
+  bottom: 32px;
+}
+
+.swiper-pagination-bullet {
+  opacity: 1;
+  width: 16px;
+  height: 16px;
+  margin: 0 6px !important;
+  border: 2px solid #FFFFFF;
+  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.2);
+  background-color: rgba(255,255,255,0);
+  outline: none;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #fff;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  width: 54px;
+  height: 54px;
+  background-color: #FFFFFF;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
+  border-radius: 50%;
+  background-image: url(../img/icons/next.svg);
+  background-repeat: no-repeat;
+  background-size: 11px 18px;
+  background-position: center;
+  outline: none;
+}
+
+.swiper-button-prev {
+  transform: rotate(180deg);
+  box-shadow: 0px -2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.promo__prev {
+  left: ~"calc(50% - 670px)";
+}
+
+.promo__next {
+  right: ~"calc(50% - 670px)";
+}
