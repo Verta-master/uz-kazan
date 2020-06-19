@@ -843,3 +843,115 @@ h5,
   font-size: 15px;
   line-height: 1.1;
 }
+.btn-deco {
+  width: 200px;
+  height: 48px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 1;
+  color: #3C3100;
+  background-color: #D9B300;
+  border-radius: 20px;
+  background-image: url(../img/icons/deco-btn.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  -webkit-transition: ease-out 0.3s;
+  transition: ease-out 0.3s;
+}
+.btn-deco:hover,
+.btn-deco:active {
+  background-color: rgba(217, 179, 0, 0.7);
+  -webkit-transition: ease-out 0.3s;
+  transition: ease-out 0.3s;
+}
+.promo {
+  position: relative;
+}
+.promo__slide {
+  height: 512px;
+  padding-top: 60px;
+  overflow: hidden;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.promo__info {
+  max-width: 420px;
+}
+.promo__title {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-family: 'Merriweather', serif;
+  font-style: italic;
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.2;
+}
+.promo__title span {
+  color: #C23A3A;
+}
+.promo__subtitle {
+  max-width: 330px;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.2;
+}
+.promo__btn {
+  margin-top: 55px;
+}
+.promo__pagination {
+  left: calc(50% - 585px);
+  bottom: 32px;
+}
+.swiper-pagination-bullet {
+  opacity: 1;
+  width: 16px;
+  height: 16px;
+  margin: 0 6px !important;
+  border: 2px solid #FFFFFF;
+  -webkit-box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.2);
+  background-color: rgba(255, 255, 255, 0);
+  outline: none;
+}
+.swiper-pagination-bullet-active {
+  background-color: #fff;
+}
+.swiper-button-next,
+.swiper-button-prev {
+  width: 54px;
+  height: 54px;
+  background-color: #FFFFFF;
+  -webkit-box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
+  border-radius: 50%;
+  background-image: url(../img/icons/next.svg);
+  background-repeat: no-repeat;
+  background-size: 11px 18px;
+  background-position: center;
+  outline: none;
+}
+.swiper-button-prev {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  -webkit-box-shadow: 0px -2px 8px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px -2px 8px rgba(0, 0, 0, 0.15);
+}
+.promo__prev {
+  left: calc(50% - 670px);
+}
+.promo__next {
+  right: calc(50% - 670px);
+}
