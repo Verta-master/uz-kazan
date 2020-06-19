@@ -1,0 +1,135 @@
+.header {
+  padding-top: 16px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgba(134,149,173,0.1);
+  background-color: #fff;
+}
+
+.header__wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__contacts {
+  display: flex;
+  align-items: center;
+}
+
+.header__block {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.header__phone {
+  position: relative;
+  display: block;
+  margin-bottom: 10px;
+  padding-left: 20px;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 1;
+  .transition();
+  
+  &::before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 0;
+    width: 12px;
+    height: 12px;
+    background-image: url(../img/icons/phone.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  
+  &:hover,
+  &:active {
+    color: @yellow;
+    .transition();
+  }
+}
+
+.header__city {
+  display: block;
+  font-size: 15px;
+  line-height: 18px;
+  color: #C23A3A;
+  
+  &:hover,
+  &:active {
+    text-decoration: underline;
+  }
+}
+
+.header__call {
+  display: block;
+  font-size: 15px;
+  line-height: 18px;
+  color: #D9B300;
+  text-decoration-line: underline;
+  
+  &:hover,
+  &:active {
+    text-decoration: none;
+  }
+}
+
+.header__price {
+  font-size: 14px;
+  line-height: 17px;
+  
+  span {
+    display: block;
+    opacity: 0.7;
+    .transition();
+  }
+}
+
+.header__icon {
+  position: relative;
+  margin-right: 27px;
+  
+  svg {
+    display: block;
+    width: 28px;
+    height: 28px;
+    fill: #242B33;
+    .transition();
+  }
+}
+
+.header__number {
+  position: absolute;
+  top: -8px;
+  right: -20px;
+  display: block;
+  width: 24px;
+  height: 22px;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 22px;
+  text-align: center;
+  color: #FFFFFF;
+  background-color: #C23A3A;
+  border: 2px solid #FFFFFF;
+  border-radius: 10px;
+}
+
+.header__basket {
+  display: flex;
+  align-items: center;
+  
+  &:hover,
+  &:active {
+    .header__icon svg {
+      fill: @yellow;
+      .transition();
+    }
+    .header__price span {
+      color: #C23A3A;
+      opacity: 1;
+      .transition();
+    }
+  }
+}
