@@ -1,17 +1,17 @@
 //Category slider
-var breakpoint2 = window.matchMedia('(min-width: 1200px)');
-var newsSwiper2;
-var breakpointChecker2 = function() {
-  if (breakpoint2.matches === true) {
-    if (newsSwiper2 !== undefined) newsSwiper2.destroy(true, true);
+var breakpoint = window.matchMedia('(min-width: 1022px)');
+var newsSwiper;
+var breakpointChecker = function() {
+  if (breakpoint.matches === true) {
+    if (newsSwiper !== undefined) newsSwiper.destroy(true, true);
     return;
-    } else if (breakpoint2.matches === false) {
-      return enableSwiper2();
+    } else if (breakpoint.matches === false) {
+      return enableSwiper();
     }
 };
 
-var enableSwiper2 = function() {
-  newsSwiper2 = new Swiper ('.category__slider', {
+var enableSwiper = function() {
+  newsSwiper = new Swiper ('.category__slider', {
     navigation: {
       nextEl: '.category__next',
       prevEl: '.category__prev',
@@ -20,13 +20,8 @@ var enableSwiper2 = function() {
     preventClicks: false,
     preventClicksPropagation: false,
     spaceBetween: 15,
+    slidesPerView: 2,
       breakpoints: {
-      1022: {
-        slidesPerView: 3,
-      },
-      766: {
-        slidesPerView: 2,
-      },
       480: {
         slidesPerView: 1,
       }
@@ -34,5 +29,5 @@ var enableSwiper2 = function() {
   })
 };
 
-breakpoint2.addListener(breakpointChecker2);
-breakpointChecker2();
+breakpoint.addListener(breakpointChecker);
+breakpointChecker();
