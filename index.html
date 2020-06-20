@@ -33,12 +33,12 @@
       </form>
       <div class="header__contacts">
         <div class="header__block">
-          <a href="tel:+74952208693" class="header__phone">+7 (495) 220-86-93</a>
+          <a href="tel:+74952208693" class="header__phone header__phone--mobile">+7 (495) 220-86-93</a>
           <a href="#" class="header__city">Москва</a>
         </div>
         <div class="header__block">
           <a href="tel:+78003014651" class="header__phone">8 (800) 301-46-51</a>
-          <a href="#" class="header__call">Заказать звонок</a>
+          <a data-fancybox="" data-src="#call" href="javascript:;" class="header__call">Заказать звонок</a>
         </div>
       </div>
       <a href="#" class="header__basket">
@@ -436,9 +436,9 @@
                   </form>
                 </div>
               </div>
-              <div class="swiper-button-prev catalog__prev"></div>
-              <div class="swiper-button-next catalog__next"></div>
             </div>
+            <div class="swiper-button-prev catalog__prev"></div>
+            <div class="swiper-button-next catalog__next"></div>
           </div>
         </div>
         <div class="tabs__field" id="tabs-2">
@@ -514,9 +514,9 @@
                   </form>
                 </div>
               </div>
-              <div class="swiper-button-prev catalog__prev"></div>
-              <div class="swiper-button-next catalog__next"></div>
             </div>
+            <div class="swiper-button-prev catalog__prev"></div>
+            <div class="swiper-button-next catalog__next"></div>
           </div>
         </div>
         <div class="tabs__field" id="tabs-3">
@@ -592,9 +592,9 @@
                   </form>
                 </div>
               </div>
-              <div class="swiper-button-prev catalog__prev"></div>
-              <div class="swiper-button-next catalog__next"></div>
             </div>
+            <div class="swiper-button-prev catalog__prev"></div>
+            <div class="swiper-button-next catalog__next"></div>
           </div>
         </div>
       </div>
@@ -735,7 +735,7 @@
     </div>
     <nav class="footer__menu">
       <div class="wrapper">
-        <button type="button" class="footer__btn">Меню</button>
+        <button type="button" class="footer__btn"></button>
         <ul class="footer__list">
           <li><a href="#">О нас</a></li>
           <li><a href="#">Каталог</a></li>
@@ -774,7 +774,40 @@
     </div>
   </footer>
   
+  <div class="mobile-footer">
+    <a href="tel:+7(495)220-86-93">Позвонить</a>
+    <a href="https://wa.me/79651602402">Написать <img src="img/icons/watsapp.svg" alt="Написать"></a>
+  </div>
+  
+  <!-- Modal window -->
+  <div style="display: none;" id="call" class="modal">
+    <form action="#" class="form">
+      <p class="form__title">Заказать звонок</p>
+      <label for="name" class="form__label">Ваше имя</label>
+      <div class="form__field form__field--required">
+        <input type="text" id="name" class="form__input" required="">
+      </div>
+      <label for="email" class="form__label">Ваш E-mail</label>
+      <div class="form__field form__field--required">
+        <input type="email" id="email" class="form__input" required="">
+      </div>
+      <label for="tel" class="form__label">Ваш телефон</label>
+      <div class="form__field form__field--required">
+        <input type="tel" id="tel" class="form__input" required="">
+      </div>
+      <label for="message" class="form__label">Ваше сообщение</label>
+      <textarea id="message" class="form__message"></textarea>
+      <input type="checkbox" id="checkbox" class="form__checkbox" checked="">
+      <label for="checkbox" class="form__checkbox-label">Я не робот</label>
+      <div class="form__line">
+        <button type="submit" class="btn form__btn">Отправить</button>
+        <p class="form__comment">Отправляя форму, я даю согласие на обработку <a href="#">персональных данных.</a></p>
+      </div>
+    </form>
+  </div>
+  
   <script src="js/jquery-3.2.1.min.js"></script>
+  <script src="js/script.js"></script>
   <script src="js/category-slider.js"></script>
   <script src="js/catalog-slider.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.1/jquery.fancybox.min.js"></script>
