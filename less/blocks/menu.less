@@ -20,23 +20,44 @@
 }
 
 .menu__item {
-  &--active .menu__link {
-    border-color: @yellow;
+  position: relative;
+  
+  &::before {
+    display: none;
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 10px;
+    right: 10px;
+    height: 2px;
+    background-color: @yellow;
+  }
+  
+  &--active::before {
+    display: block;
   }
   
   &:hover .menu__link {
     color: @yellow;
     .transition();
   }
+  
+  &:last-child {
+    .menu__link {
+      padding-right: 0;
+    }
+    &::before {
+      right: -10px;
+    }
+  }
 }
 
 .menu__link {
   display: block;
-  padding: 23px 15px;
+  padding: 23px 20px;
   font-weight: 500;
   font-size: 15px;
   line-height: 1;
   letter-spacing: 0.01em;
-  border-bottom: 2px solid #fff;
   .transition();
 }

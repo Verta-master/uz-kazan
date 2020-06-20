@@ -1,10 +1,10 @@
 .btn-deco {
   width: 200px;
-  height: 48px;
+  height: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-weight: 800;
+  font-weight: 700;
   font-size: 18px;
   line-height: 1;
   color: #3C3100;
@@ -20,5 +20,49 @@
   &:active {
     background-color: rgba(217,179,0,0.7);
     .transition();
+  }
+}
+
+.btn {
+  position: relative;
+  z-index: 2;
+  width: 130px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1;
+  color: #3C3100;
+  background-color: #D9B300;
+  background-image: linear-gradient(104.45deg, rgba(255, 255, 255, 0.4) 1.19%, rgba(255, 255, 255, 0) 100%);
+  border-radius: 15px;
+  
+  
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: 9px;
+    right: 9px;
+    top: 19px;
+    bottom: -3px;
+    background-color: #D9B300;
+    opacity: 0.5;
+    filter: blur(20px);
+    border-radius: 15px;
+    .transition();
+  }
+  
+  &:hover,
+  &:active {
+    background-image: none;
+    
+    &::before {
+      opacity: 0;
+      background-image: none;
+      .transition();
+    }
   }
 }

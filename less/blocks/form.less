@@ -1,0 +1,130 @@
+.form {
+  width: 100%;
+  padding: 20px 30px;
+  background: #FFFFFF;
+  border-radius: 20px;
+}
+
+.form__title {
+  margin-top: 0;
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: 800;
+  font-size: 22px;
+  line-height: 1.2;
+  
+  span {
+    color: @yellow;
+  }
+}
+
+.form__label {
+  display: block;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 26px;
+}
+
+.form__field {
+  width: 100%;
+  position: relative;
+  
+  &::after {
+    display: none;
+    content: "*";
+    position: absolute;
+    top: 10px;
+    right: 16px;
+    color: #C23A3A;
+    font-size: 20px;
+    line-height: 1;
+  }
+  
+  &--required::after {
+    display: block;
+  }
+}
+
+.form__input,
+.form__message {
+  width: 100%;
+  margin-bottom: 10px;
+  background-color: #FAFAFA;
+  border: 1px solid rgba(152, 172, 179, 0.4);
+  border-radius: 5px;
+}
+
+.form__input {
+  height: 40px;
+  padding-left: 10px;
+  padding-right: 20px;
+}
+
+.form__message {
+  height: 81px;
+  min-height: 81px;
+  padding: 10px;
+}
+
+.form__checkbox {
+  display: none;
+}
+
+.form__checkbox-label {
+  display: block;
+  position: relative;
+  padding-left: 22px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1;
+  
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 14px;
+    height: 14px;
+    background-color: #D9B300;
+    border-radius: 4px;
+  }
+  
+  &::after {
+    display: none;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 14px;
+    height: 14px;
+    background-image: url(../img/icons/tick.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 10px 10px;
+  }
+}
+
+.form__checkbox:checked + .form__checkbox-label::after {
+  display: block;
+}
+
+.form__line {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 27px;
+}
+
+.form__comment {
+  width: 160px;
+  margin: 0;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1;
+  color: #98ACB3;
+  
+  a:hover,
+  a:active {
+    text-decoration: underline;
+  }
+}
