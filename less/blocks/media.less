@@ -159,6 +159,13 @@
   .footer {
     padding-bottom: 40px;
   }
+  .catalog__list {
+    margin-right: 0;
+    justify-content: space-around;
+  }
+  .catalog__item {
+    margin-right: 0;
+  }
 }
 
 @media (max-width: 1022px) {
@@ -268,6 +275,30 @@
       z-index: 5;
     }
   }
+  .wrapper__columns {
+    flex-direction: column-reverse;
+  }
+  .sidebar {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .wrapper__content {
+    width: 100%;
+  }
+  .sort {
+    position: static;
+    margin-bottom: 30px;
+  }
+  .sidebar__filter {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+    width: 280px;
+  }
+  .sidebar__block {
+    display: none;
+  }
 }
 
 @media (max-width: 766px) {
@@ -375,5 +406,10 @@
   .catalog__next,
   .catalog__prev {
     top: 40%;
+  }
+  .sort__link {
+    display: block;
+    margin-top: 10px;
+    margin-left: 0;
   }
 }
