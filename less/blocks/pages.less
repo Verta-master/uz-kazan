@@ -1,0 +1,38 @@
+.pages {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-top: 10px;
+  margin-bottom: 70px;
+}
+
+.pages__link {
+  display: block;
+  margin-left: 10px;
+  margin-right: 10px;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 24px;
+  color: @yellow;
+  .transition();
+  
+  &:hover,
+  &:active {
+    color: #98ACB3;
+    .transition();
+  }
+  
+  &--active {
+    color: #98ACB3;
+    pointer-events: none;
+  }
+  
+  &--hidden {
+    display: none;
+  }
+}
+
+span.pages__link {
+  pointer-events: none;
+}

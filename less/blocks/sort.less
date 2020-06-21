@@ -1,0 +1,52 @@
+.sort {
+  position: absolute;
+  top: -90px;
+  right: 0;
+  
+  span {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 24px;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 19px;
+  }
+}
+
+.sort__link {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  height: 40px;
+  margin-left: 15px;
+  padding: 11px 14px;
+  padding-right: 50px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  border: 1px solid #3C3100;
+  border-radius: 10px;
+  .transition();
+  
+  &::after {
+    content: "";
+    position: absolute;
+    top: 12px;
+    right: 15px;
+    width: 14px;
+    height: 14px;
+    background-image: url(../img/icons/down.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  
+  &--up::after {
+    transform: rotate(180deg);
+  }
+    
+  &:hover,
+  &:active {
+    border-color: @yellow;
+    .transition();
+  }
+}

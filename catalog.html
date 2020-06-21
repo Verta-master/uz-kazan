@@ -141,291 +141,275 @@
       </div>
     </nav>
     
-    <div class="wrapper wrapper--columns">
+    <div class="wrapper wrapper--internal">
       <h1 class="title">Каталог товаров</h1>
-     
-      <aside class="sidebar">
-        <div class="filter">
-          <button type="button" class=" btn filter__btn"></button>
-          <form action="#" class="filter__form">
-            <fieldset class="form__field">
-              <p class="filter__title">Цена товара руб.</p>
-              <div class="filter__wrap">
-                <div class="filter__value">
-                  <input type="text" id="amount-min" class="filter__input">
+      <div class="wrapper__columns">
+        <aside class="sidebar">
+          <div class="filter">
+            <button type="button" class=" btn filter__btn"></button>
+            <form action="#" class="filter__form">
+              <fieldset class="form__field">
+                <p class="filter__title">Цена товара руб.</p>
+                <div class="filter__wrap">
+                  <div class="filter__value">
+                    <input type="text" id="amount-min" class="filter__input">
+                  </div>
+                  <span>-</span>
+                  <div class="filter__value">
+                    <input type="text" id="amount-max" class="filter__input">
+                  </div>
                 </div>
-                <span>-</span>
-                <div class="filter__value">
-                  <input type="text" id="amount-max" class="filter__input">
+                <div class="filter__range">
+                  <div id="slider-range"></div>
                 </div>
+              </fieldset>
+              <fieldset class="form__field">
+                <p class="filter__title">Объём</p>
+                <input type="checkbox" id="checkbox1" class="form__checkbox" checked>
+                <label for="checkbox1" class="form__checkbox-label">2,5 литров</label>
+                <input type="checkbox" id="checkbox1" class="form__checkbox">
+                <label for="checkbox1" class="form__checkbox-label">3,5 литров</label>
+                <input type="checkbox" id="checkbox1" class="form__checkbox">
+                <label for="checkbox1" class="form__checkbox-label">4 литра</label>
+                <input type="checkbox" id="checkbox1" class="form__checkbox">
+                <label for="checkbox1" class="form__checkbox-label">5 литров</label>
+              </fieldset>
+              <button type="submit" class="btn btn--black form__find">Найти</button>
+            </form>
+          </div>
+
+          <nav class="sidebar__category">
+            <p class="sidebar__title">Категории</p>
+            <ul class="sidebar__list">
+              <li class="sidebar__item">
+                <a href="#" type="button" class="sidebar__link">Узбекские чугунные казаны из Намангана</a>
+                <button type="button" class="sidebar__btn">
+                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                    <path d="M6.58594 13L12.2428 7.34315L6.58594 1.68629" stroke-width="2"/>
+                  </svg>
+                </button>
+                <div class="sidebar__drop">
+                  <a href="#">Комплект №1</a>
+                  <a href="#">Комплект №2</a>
+                  <a href="#">Комплект №3</a>
+                </div>
+              </li>
+              <li class="sidebar__item">
+                <a href="#" type="button" class="sidebar__link">Комплекты: Узбекские чугунные казаны с печкой</a>
+                <button type="button" class="sidebar__btn">
+                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                    <path d="M6.58594 13L12.2428 7.34315L6.58594 1.68629" stroke-width="2"/>
+                  </svg>
+                </button>
+                <div class="sidebar__drop">
+                  <a href="#">Комплект №1</a>
+                  <a href="#">Комплект №2</a>
+                  <a href="#">Комплект №3</a>
+                  <a href="#">Комплект №4</a>
+                </div>
+              </li>
+              <li class="sidebar__item">
+                <a href="#" type="button" class="sidebar__link">Мангалы</a>
+                <button type="button" class="sidebar__btn">
+                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                    <path d="M6.58594 13L12.2428 7.34315L6.58594 1.68629" stroke-width="2"/>
+                  </svg>
+                </button>
+                <div class="sidebar__drop">
+                  <a href="#">Комплект №1</a>
+                  <a href="#">Комплект №2</a>
+                </div>
+              </li>
+              <li class="sidebar__item">
+                <a href="#" type="button" class="sidebar__link">Афганские казаны</a>
+                <button type="button" class="sidebar__btn">
+                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                    <path d="M6.58594 13L12.2428 7.34315L6.58594 1.68629" stroke-width="2"/>
+                  </svg>
+                </button>
+                <div class="sidebar__drop">
+                  <a href="#">Комплект №1</a>
+                  <a href="#">Комплект №2</a>
+                  <a href="#">Комплект №3</a>
+                  <a href="#">Комплект №4</a>
+                </div>
+              </li>
+              <li class="sidebar__item">
+                <a href="#" type="button" class="sidebar__link">Чугунный казан, сковорода и горшки для запекания</a>
+                <button type="button" class="sidebar__btn">
+                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                    <path d="M6.58594 13L12.2428 7.34315L6.58594 1.68629" stroke-width="2"/>
+                  </svg>
+                </button>
+                <div class="sidebar__drop">
+                  <a href="#">Комплект №1</a>
+                  <a href="#">Комплект №2</a>
+                  <a href="#">Комплект №3</a>
+                  <a href="#">Комплект №4</a>
+                </div>
+              </li>
+            </ul>
+          </nav>
+        </aside>
+
+        <div class="wrapper__content">
+          <div class="catalog">
+            <div class="sort">
+              <span>Сортировать</span>
+              <a href="#" class="sort__link">По цене</a>
+              <a href="#" class="sort__link sort__link--up">По названию</a>
+            </div>
+            <ul class="catalog__list">
+              <div class="catalog__item">
+                <div class="catalog__labels">
+                  <div class="catalog__label">New</div>
+                </div>
+                <a href="#" class="catalog__link">
+                  <figure class="catalog__img">
+                    <img src="img/images/item-1.jpg" alt="Казан чугунный">
+                  </figure>
+                  <p class="title-5">Казан чугунный — 12 литров (дно круглое)</p>
+                </a>
+                <form action="#" class="catalog__form">
+                  <div class="catalog__wrap">
+                    <p class="catalog__price">35 000р.</p>
+                    <a href="#" class="btn catalog__btn">В корзину</a>
+                  </div>
+                </form>
               </div>
-              <div class="filter__range">
-                <div id="slider-range"></div>
+              <div class="catalog__item">
+                <div class="catalog__labels">
+                  <div class="catalog__label">New</div>
+                </div>
+                <a href="#" class="catalog__link">
+                  <figure class="catalog__img">
+                    <img src="img/images/item-2.jpg" alt="Казан чугунный">
+                  </figure>
+                  <p class="title-5">Казан чугунный — 12 литров (дно круглое)</p>
+                </a>
+                <form action="#" class="catalog__form">
+                  <div class="catalog__wrap">
+                    <p class="catalog__price">35 000р.</p>
+                    <a href="#" class="btn catalog__btn">В корзину</a>
+                  </div>
+                </form>
               </div>
-            </fieldset>
-            <fieldset class="form__field">
-              <p class="filter__title">Объём</p>
-              <input type="checkbox" id="checkbox1" class="form__checkbox" checked>
-              <label for="checkbox1" class="form__checkbox-label">2,5 литров</label>
-              <input type="checkbox" id="checkbox1" class="form__checkbox">
-              <label for="checkbox1" class="form__checkbox-label">3,5 литров</label>
-              <input type="checkbox" id="checkbox1" class="form__checkbox">
-              <label for="checkbox1" class="form__checkbox-label">4 литра</label>
-              <input type="checkbox" id="checkbox1" class="form__checkbox">
-              <label for="checkbox1" class="form__checkbox-label">5 литров</label>
-            </fieldset>
-            <button type="submit" class="btn btn--black form__find">Найти</button>
-          </form>
+              <div class="catalog__item">
+                <div class="catalog__labels">
+                  <div class="catalog__label">New</div>
+                </div>
+                <a href="#" class="catalog__link">
+                  <figure class="catalog__img">
+                    <img src="img/images/item-3.jpg" alt="Казан чугунный">
+                  </figure>
+                  <p class="title-5">Казан чугунный — 12 литров (дно круглое)</p>
+                </a>
+                <form action="#" class="catalog__form">
+                  <div class="catalog__wrap">
+                    <p class="catalog__price">35 000р.</p>
+                    <a href="#" class="btn catalog__btn">В корзину</a>
+                  </div>
+                </form>
+              </div>
+              <div class="catalog__item">
+                <div class="catalog__labels">
+                  <div class="catalog__label">New</div>
+                </div>
+                <a href="#" class="catalog__link">
+                  <figure class="catalog__img">
+                    <img src="img/images/item-4.jpg" alt="Казан чугунный">
+                  </figure>
+                  <p class="title-5">Казан чугунный — 12 литров (дно круглое)</p>
+                </a>
+                <form action="#" class="catalog__form">
+                  <div class="catalog__wrap">
+                    <p class="catalog__price">35 000р.</p>
+                    <a href="#" class="btn catalog__btn">В корзину</a>
+                  </div>
+                </form>
+              </div>
+              <div class="catalog__item">
+                <div class="catalog__labels">
+                  <div class="catalog__label">New</div>
+                </div>
+                <a href="#" class="catalog__link">
+                  <figure class="catalog__img">
+                    <img src="img/images/item-1.jpg" alt="Казан чугунный">
+                  </figure>
+                  <p class="title-5">Казан чугунный — 12 литров (дно круглое)</p>
+                </a>
+                <form action="#" class="catalog__form">
+                  <div class="catalog__wrap">
+                    <p class="catalog__price">35 000р.</p>
+                    <a href="#" class="btn catalog__btn">В корзину</a>
+                  </div>
+                </form>
+              </div>
+              <div class="catalog__item">
+                <div class="catalog__labels">
+                  <div class="catalog__label">New</div>
+                </div>
+                <a href="#" class="catalog__link">
+                  <figure class="catalog__img">
+                    <img src="img/images/item-2.jpg" alt="Казан чугунный">
+                  </figure>
+                  <p class="title-5">Казан чугунный — 12 литров (дно круглое)</p>
+                </a>
+                <form action="#" class="catalog__form">
+                  <div class="catalog__wrap">
+                    <p class="catalog__price">35 000р.</p>
+                    <a href="#" class="btn catalog__btn">В корзину</a>
+                  </div>
+                </form>
+              </div>
+              <div class="catalog__item">
+                <div class="catalog__labels">
+                  <div class="catalog__label">New</div>
+                </div>
+                <a href="#" class="catalog__link">
+                  <figure class="catalog__img">
+                    <img src="img/images/item-3.jpg" alt="Казан чугунный">
+                  </figure>
+                  <p class="title-5">Казан чугунный — 12 литров (дно круглое)</p>
+                </a>
+                <form action="#" class="catalog__form">
+                  <div class="catalog__wrap">
+                    <p class="catalog__price">35 000р.</p>
+                    <a href="#" class="btn catalog__btn">В корзину</a>
+                  </div>
+                </form>
+              </div>
+              <div class="catalog__item">
+                <div class="catalog__labels">
+                  <div class="catalog__label">New</div>
+                </div>
+                <a href="#" class="catalog__link">
+                  <figure class="catalog__img">
+                    <img src="img/images/item-4.jpg" alt="Казан чугунный">
+                  </figure>
+                  <p class="title-5">Казан чугунный — 12 литров (дно круглое)</p>
+                </a>
+                <form action="#" class="catalog__form">
+                  <div class="catalog__wrap">
+                    <p class="catalog__price">35 000р.</p>
+                    <a href="#" class="btn catalog__btn">В корзину</a>
+                  </div>
+                </form>
+              </div>
+            </ul>
+          </div>
+
+          <nav class="pages">
+            <a href="#" class="pages__link pages__link--hidden">&laquo;</a>
+            <a class="pages__link pages__link--active">1</a>
+            <a href="#" class="pages__link">2</a>
+            <a href="#" class="pages__link">3</a>
+            <span class="pages__link">...</span>
+            <a href="#" class="pages__link">&raquo;</a>
+          </nav>
         </div>
-        
-        <nav class="sidebar__category">
-          <p class="sidebar__title">Категории</p>
-          <ul class="sidebar__list">
-            <li class="sidebar__item">
-              <a href="#" type="button" class="sidebar__link">Узбекские чугунные казаны из Намангана</a>
-              <button type="button" class="sidebar__btn">
-                <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-                  <path d="M6.58594 13L12.2428 7.34315L6.58594 1.68629" stroke-width="2"/>
-                </svg>
-              </button>
-              <div class="sidebar__drop">
-                <a href="#">Комплект №1</a>
-                <a href="#">Комплект №2</a>
-                <a href="#">Комплект №3</a>
-              </div>
-            </li>
-            <li class="sidebar__item">
-              <a href="#" type="button" class="sidebar__link">Комплекты: Узбекские чугунные казаны с печкой</a>
-              <button type="button" class="sidebar__btn">
-                <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-                  <path d="M6.58594 13L12.2428 7.34315L6.58594 1.68629" stroke-width="2"/>
-                </svg>
-              </button>
-              <div class="sidebar__drop">
-                <a href="#">Комплект №1</a>
-                <a href="#">Комплект №2</a>
-                <a href="#">Комплект №3</a>
-                <a href="#">Комплект №4</a>
-              </div>
-            </li>
-            <li class="sidebar__item">
-              <a href="#" type="button" class="sidebar__link">Мангалы</a>
-              <button type="button" class="sidebar__btn">
-                <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-                  <path d="M6.58594 13L12.2428 7.34315L6.58594 1.68629" stroke-width="2"/>
-                </svg>
-              </button>
-              <div class="sidebar__drop">
-                <a href="#">Комплект №1</a>
-                <a href="#">Комплект №2</a>
-              </div>
-            </li>
-            <li class="sidebar__item">
-              <a href="#" type="button" class="sidebar__link">Афганские казаны</a>
-              <button type="button" class="sidebar__btn">
-                <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-                  <path d="M6.58594 13L12.2428 7.34315L6.58594 1.68629" stroke-width="2"/>
-                </svg>
-              </button>
-              <div class="sidebar__drop">
-                <a href="#">Комплект №1</a>
-                <a href="#">Комплект №2</a>
-                <a href="#">Комплект №3</a>
-                <a href="#">Комплект №4</a>
-              </div>
-            </li>
-            <li class="sidebar__item">
-              <a href="#" type="button" class="sidebar__link">Чугунный казан, сковорода и горшки для запекания</a>
-              <button type="button" class="sidebar__btn">
-                <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-                  <path d="M6.58594 13L12.2428 7.34315L6.58594 1.68629" stroke-width="2"/>
-                </svg>
-              </button>
-              <div class="sidebar__drop">
-                <a href="#">Комплект №1</a>
-                <a href="#">Комплект №2</a>
-                <a href="#">Комплект №3</a>
-                <a href="#">Комплект №4</a>
-              </div>
-            </li>
-          </ul>
-        </nav>
-      </aside>
-      
-      <div class="wrapper__content">
-        <div class="sort">
-          <span>Сортировать</span>
-          <a href="#" class="sort__link">По цене</a>
-          <a href="#" class="sort__link sort__link--up">По названию</a>
-        </div>
-        
-        <div class="catalog">
-          <ul class="catalog__list">
-            <div class="catalog__item">
-              <div class="catalog__labels">
-                <div class="catalog__label">New</div>
-              </div>
-              <a href="#" class="catalog__link">
-                <figure class="catalog__img">
-                  <img src="img/images/item-1.jpg" alt="Казан чугунный">
-                </figure>
-                <p class="title-5">Казан чугунный — 12 литров (дно круглое)</p>
-              </a>
-              <form action="#" class="catalog__form">
-                <div class="catalog__wrap">
-                  <p class="catalog__price">35 000р.</p>
-                  <a href="#" class="btn catalog__btn">В корзину</a>
-                </div>
-              </form>
-            </div>
-            <div class="catalog__item">
-              <div class="catalog__labels">
-                <div class="catalog__label">New</div>
-              </div>
-              <a href="#" class="catalog__link">
-                <figure class="catalog__img">
-                  <img src="img/images/item-2.jpg" alt="Казан чугунный">
-                </figure>
-                <p class="title-5">Казан чугунный — 12 литров (дно круглое)</p>
-              </a>
-              <form action="#" class="catalog__form">
-                <div class="catalog__wrap">
-                  <p class="catalog__price">35 000р.</p>
-                  <a href="#" class="btn catalog__btn">В корзину</a>
-                </div>
-              </form>
-            </div>
-            <div class="catalog__item">
-              <div class="catalog__labels">
-                <div class="catalog__label">New</div>
-              </div>
-              <a href="#" class="catalog__link">
-                <figure class="catalog__img">
-                  <img src="img/images/item-3.jpg" alt="Казан чугунный">
-                </figure>
-                <p class="title-5">Казан чугунный — 12 литров (дно круглое)</p>
-              </a>
-              <form action="#" class="catalog__form">
-                <div class="catalog__wrap">
-                  <p class="catalog__price">35 000р.</p>
-                  <a href="#" class="btn catalog__btn">В корзину</a>
-                </div>
-              </form>
-            </div>
-            <div class="catalog__item">
-              <div class="catalog__labels">
-                <div class="catalog__label">New</div>
-              </div>
-              <a href="#" class="catalog__link">
-                <figure class="catalog__img">
-                  <img src="img/images/item-4.jpg" alt="Казан чугунный">
-                </figure>
-                <p class="title-5">Казан чугунный — 12 литров (дно круглое)</p>
-              </a>
-              <form action="#" class="catalog__form">
-                <div class="catalog__wrap">
-                  <p class="catalog__price">35 000р.</p>
-                  <a href="#" class="btn catalog__btn">В корзину</a>
-                </div>
-              </form>
-            </div>
-            <div class="catalog__item">
-              <div class="catalog__labels">
-                <div class="catalog__label">New</div>
-              </div>
-              <a href="#" class="catalog__link">
-                <figure class="catalog__img">
-                  <img src="img/images/item-1.jpg" alt="Казан чугунный">
-                </figure>
-                <p class="title-5">Казан чугунный — 12 литров (дно круглое)</p>
-              </a>
-              <form action="#" class="catalog__form">
-                <div class="catalog__wrap">
-                  <p class="catalog__price">35 000р.</p>
-                  <a href="#" class="btn catalog__btn">В корзину</a>
-                </div>
-              </form>
-            </div>
-            <div class="catalog__item">
-              <div class="catalog__labels">
-                <div class="catalog__label">New</div>
-              </div>
-              <a href="#" class="catalog__link">
-                <figure class="catalog__img">
-                  <img src="img/images/item-2.jpg" alt="Казан чугунный">
-                </figure>
-                <p class="title-5">Казан чугунный — 12 литров (дно круглое)</p>
-              </a>
-              <form action="#" class="catalog__form">
-                <div class="catalog__wrap">
-                  <p class="catalog__price">35 000р.</p>
-                  <a href="#" class="btn catalog__btn">В корзину</a>
-                </div>
-              </form>
-            </div>
-            <div class="catalog__item">
-              <div class="catalog__labels">
-                <div class="catalog__label">New</div>
-              </div>
-              <a href="#" class="catalog__link">
-                <figure class="catalog__img">
-                  <img src="img/images/item-3.jpg" alt="Казан чугунный">
-                </figure>
-                <p class="title-5">Казан чугунный — 12 литров (дно круглое)</p>
-              </a>
-              <form action="#" class="catalog__form">
-                <div class="catalog__wrap">
-                  <p class="catalog__price">35 000р.</p>
-                  <a href="#" class="btn catalog__btn">В корзину</a>
-                </div>
-              </form>
-            </div>
-            <div class="catalog__item">
-              <div class="catalog__labels">
-                <div class="catalog__label">New</div>
-              </div>
-              <a href="#" class="catalog__link">
-                <figure class="catalog__img">
-                  <img src="img/images/item-4.jpg" alt="Казан чугунный">
-                </figure>
-                <p class="title-5">Казан чугунный — 12 литров (дно круглое)</p>
-              </a>
-              <form action="#" class="catalog__form">
-                <div class="catalog__wrap">
-                  <p class="catalog__price">35 000р.</p>
-                  <a href="#" class="btn catalog__btn">В корзину</a>
-                </div>
-              </form>
-            </div>
-          </ul>
-        </div>
-        
-        <nav class="pages">
-          <a href="#" class="pages__link pages__link--hidden">&laquo;</a>
-          <a class="pages__link pages__link--active">1</a>
-          <a href="#" class="pages__link">2</a>
-          <a href="#" class="pages__link">3</a>
-          <a href="#" class="pages__link">...</a>
-          <a href="#" class="pages__link">&raquo;</a>
-        </nav>
       </div>
     </div>
-    
-    <section class="tabs" id="tabs">
-      <div class="wrapper">
-        <div class="tabs__field" id="tabs-1">
-          <div class="catalog">
-            <div class="swiper-container catalog__slider">
-              <div class="swiper-wrapper">
-              </div>
-            </div>
-            <div class="swiper-button-prev catalog__prev"></div>
-            <div class="swiper-button-next catalog__next"></div>
-          </div>
-        </div>
-      </div>
-    </section>
-    
   </main>
   
   <footer class="footer">

@@ -1,0 +1,40 @@
+.breadcrumbs {
+  padding-top: 26px;
+  padding-bottom: 26px;
+}
+
+.breadcrumbs__link {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.2;
+}
+
+a.breadcrumbs__link {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 5px;
+  .transition();
+  
+  &::after {
+    display: inline-block;
+    vertical-align: middle;
+    content: "\27A4";
+    margin-left: 5px;
+    font-size: 6px;
+    line-height: 1;
+  }
+  
+  &:hover,
+  &:active {
+    color: @yellow;
+    .transition();
+    
+    &::after {
+      color: #242B33;
+    }
+  }
+}
+
+span.breadcrumbs__link {
+  color: @yellow;
+}
