@@ -1,0 +1,155 @@
+.filter {
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.filter__btn {
+  display: none;
+}
+
+.filter__form {
+  width: 100%;
+  padding: 24px 20px;
+  padding-bottom: 30px;
+  border-radius: 20px;
+  background-color: #fff;
+  
+  .form__checkbox-label {
+    margin-bottom: 15px;
+    padding-left: 30px;
+    
+    &::before,
+    &::after {
+      width: 20px;
+      height: 20px;
+      top: -3px;
+    }
+    &::after {
+      background-size: 14px 13px;
+    }
+  }
+}
+
+.filter__title {
+  margin-top: 0;
+  margin-bottom: 13px;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 26px;
+}
+
+.filter__field {
+  .reset();
+  border: 0;
+  margin-bottom: 22px;
+}
+
+.filter__wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  
+  span {
+    color: #98ACB3;
+    opacity: 0.5;
+  }
+}
+
+.filter__value {
+  position: relative;
+  z-index: 1;
+  font-size: 14px;
+  color: #98ACB2;
+  line-height: 40px;
+  
+  &::before {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    padding-left: 10px;
+    z-index: 5;
+  }
+  
+  &--min::before {
+    content: "от";
+  }
+  
+  &--max::before {
+    content: "до";
+  }
+}
+
+.filter__input {
+  position: relative;
+  width: 100px;
+  height: 40px;
+  padding-left: 30px;
+  font-size: 14px;
+  background: #F0F0F0;
+  border: 1px solid rgba(152, 172, 179, 0.3);
+  border-radius: 10px;
+}
+
+.filter__form {
+  .ui-slider {
+    position: relative;
+  }
+  /* Ползунок */
+  .ui-slider .ui-slider-handle {
+    position: absolute;
+    z-index: 2;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background-color: #fff;
+    box-shadow: 0px 2px 8px #98ACB3;
+    cursor: pointer;
+    outline: none;
+  }
+  .ui-slider .ui-slider-range {
+    position: absolute;
+    z-index: 1;
+    font-size: .7em;
+    display: block;
+    border: 0;
+    overflow: hidden;
+  }
+  /* горизонтальный слайдер (сама полоса по которой бегает ползунок) */
+  .ui-slider-horizontal {
+    height: 10px;
+  }
+  /* позиционируем ползунки */
+  .ui-slider-horizontal .ui-slider-handle { 
+    top: -5px;
+    margin-left: -8px;
+  }
+  .ui-slider-horizontal .ui-slider-range {
+    top: 0;
+    height: 100%;
+  }
+  .ui-slider-horizontal .ui-slider-range-min { 
+    left: 0;
+  }
+  .ui-slider-horizontal .ui-slider-range-max {
+    right: 0;
+  }
+  /* оформление полосы по которой ходит ползунок */
+  .ui-widget-content { 
+    border: 1px solid rgba(152,172,179,0.5);
+    background-color: rgba(152,172,179,0.5);
+  }
+  /* оформление активного участка (между двумя ползунками) */
+  .ui-widget-header { 
+    border: 1px solid @yellow;
+    background-color: @yellow;
+  }
+  /* скругление для полосы слайдера */
+  .ui-corner-all {
+    border-radius: 5px;
+  }
+  .ui-widget.ui-widget-content {
+    border: 0;
+  }
+}

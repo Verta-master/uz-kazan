@@ -85,7 +85,7 @@
     left: 0;
     width: 14px;
     height: 14px;
-    background-color: #D9B300;
+    border: 1px solid #98ACB3;
     border-radius: 4px;
   }
   
@@ -97,15 +97,20 @@
     left: 0;
     width: 14px;
     height: 14px;
+    background-color: #D9B300;
     background-image: url(../img/icons/tick.svg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: 10px 10px;
+    border-radius: 4px;
   }
 }
 
 .form__checkbox:checked + .form__checkbox-label::after {
   display: block;
+}
+.form__checkbox:checked + .form__checkbox-label::before {
+  border-color: @yellow;
 }
 
 .form__line {
