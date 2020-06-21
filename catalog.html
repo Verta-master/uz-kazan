@@ -146,16 +146,16 @@
       <div class="wrapper__columns">
         <aside class="sidebar">
           <div class="filter">
-            <button type="button" class=" btn filter__btn"></button>
+            <button type="button" class="btn filter__btn">Фильтр</button>
             <form action="#" class="filter__form">
-              <fieldset class="form__field">
+              <fieldset class="filter__field">
                 <p class="filter__title">Цена товара руб.</p>
                 <div class="filter__wrap">
-                  <div class="filter__value">
+                  <div class="filter__value filter__value--min">
                     <input type="text" id="amount-min" class="filter__input">
                   </div>
-                  <span>-</span>
-                  <div class="filter__value">
+                  <span>&mdash;</span>
+                  <div class="filter__value filter__value--max">
                     <input type="text" id="amount-max" class="filter__input">
                   </div>
                 </div>
@@ -163,16 +163,16 @@
                   <div id="slider-range"></div>
                 </div>
               </fieldset>
-              <fieldset class="form__field">
+              <fieldset class="filter__field">
                 <p class="filter__title">Объём</p>
                 <input type="checkbox" id="checkbox1" class="form__checkbox" checked="">
                 <label for="checkbox1" class="form__checkbox-label">2,5 литров</label>
-                <input type="checkbox" id="checkbox1" class="form__checkbox">
-                <label for="checkbox1" class="form__checkbox-label">3,5 литров</label>
-                <input type="checkbox" id="checkbox1" class="form__checkbox">
-                <label for="checkbox1" class="form__checkbox-label">4 литра</label>
-                <input type="checkbox" id="checkbox1" class="form__checkbox">
-                <label for="checkbox1" class="form__checkbox-label">5 литров</label>
+                <input type="checkbox" id="checkbox2" class="form__checkbox">
+                <label for="checkbox2" class="form__checkbox-label">3,5 литров</label>
+                <input type="checkbox" id="checkbox3" class="form__checkbox">
+                <label for="checkbox3" class="form__checkbox-label">4 литра</label>
+                <input type="checkbox" id="checkbox4" class="form__checkbox">
+                <label for="checkbox4" class="form__checkbox-label">5 литров</label>
               </fieldset>
               <button type="submit" class="btn btn--black form__find">Найти</button>
             </form>
@@ -182,12 +182,14 @@
             <p class="sidebar__title">Категории</p>
             <ul class="sidebar__list">
               <li class="sidebar__item">
-                <a href="#" type="button" class="sidebar__link">Узбекские чугунные казаны из Намангана</a>
-                <button type="button" class="sidebar__btn">
-                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-                    <path d="M6.58594 13L12.2428 7.34315L6.58594 1.68629" stroke-width="2"></path>
-                  </svg>
-                </button>
+                <div class="sidebar__wrap">
+                  <a href="#" type="button" class="sidebar__link">Узбекские чугунные казаны из Намангана</a>
+                  <button type="button" class="sidebar__btn">
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                      <path d="M6.58594 13L12.2428 7.34315L6.58594 1.68629" stroke-width="2"></path>
+                    </svg>
+                  </button>
+                </div>
                 <div class="sidebar__drop">
                   <a href="#">Комплект №1</a>
                   <a href="#">Комплект №2</a>
@@ -195,38 +197,14 @@
                 </div>
               </li>
               <li class="sidebar__item">
-                <a href="#" type="button" class="sidebar__link">Комплекты: Узбекские чугунные казаны с печкой</a>
-                <button type="button" class="sidebar__btn">
-                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-                    <path d="M6.58594 13L12.2428 7.34315L6.58594 1.68629" stroke-width="2"></path>
-                  </svg>
-                </button>
-                <div class="sidebar__drop">
-                  <a href="#">Комплект №1</a>
-                  <a href="#">Комплект №2</a>
-                  <a href="#">Комплект №3</a>
-                  <a href="#">Комплект №4</a>
+                <div class="sidebar__wrap">
+                  <a href="#" type="button" class="sidebar__link">Комплекты: Узбекские чугунные казаны с печкой</a>
+                  <button type="button" class="sidebar__btn">
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                      <path d="M6.58594 13L12.2428 7.34315L6.58594 1.68629" stroke-width="2"></path>
+                    </svg>
+                  </button>
                 </div>
-              </li>
-              <li class="sidebar__item">
-                <a href="#" type="button" class="sidebar__link">Мангалы</a>
-                <button type="button" class="sidebar__btn">
-                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-                    <path d="M6.58594 13L12.2428 7.34315L6.58594 1.68629" stroke-width="2"></path>
-                  </svg>
-                </button>
-                <div class="sidebar__drop">
-                  <a href="#">Комплект №1</a>
-                  <a href="#">Комплект №2</a>
-                </div>
-              </li>
-              <li class="sidebar__item">
-                <a href="#" type="button" class="sidebar__link">Афганские казаны</a>
-                <button type="button" class="sidebar__btn">
-                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-                    <path d="M6.58594 13L12.2428 7.34315L6.58594 1.68629" stroke-width="2"></path>
-                  </svg>
-                </button>
                 <div class="sidebar__drop">
                   <a href="#">Комплект №1</a>
                   <a href="#">Комплект №2</a>
@@ -235,12 +213,44 @@
                 </div>
               </li>
               <li class="sidebar__item">
-                <a href="#" type="button" class="sidebar__link">Чугунный казан, сковорода и горшки для запекания</a>
-                <button type="button" class="sidebar__btn">
-                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-                    <path d="M6.58594 13L12.2428 7.34315L6.58594 1.68629" stroke-width="2"></path>
-                  </svg>
-                </button>
+                <div class="sidebar__wrap">
+                  <a href="#" type="button" class="sidebar__link">Мангалы</a>
+                  <button type="button" class="sidebar__btn">
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                      <path d="M6.58594 13L12.2428 7.34315L6.58594 1.68629" stroke-width="2"></path>
+                    </svg>
+                  </button>
+                </div>
+                <div class="sidebar__drop">
+                  <a href="#">Комплект №1</a>
+                  <a href="#">Комплект №2</a>
+                </div>
+              </li>
+              <li class="sidebar__item">
+                <div class="sidebar__wrap">
+                  <a href="#" type="button" class="sidebar__link">Афганские казаны</a>
+                  <button type="button" class="sidebar__btn">
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                      <path d="M6.58594 13L12.2428 7.34315L6.58594 1.68629" stroke-width="2"></path>
+                    </svg>
+                  </button>
+                </div>
+                <div class="sidebar__drop">
+                  <a href="#">Комплект №1</a>
+                  <a href="#">Комплект №2</a>
+                  <a href="#">Комплект №3</a>
+                  <a href="#">Комплект №4</a>
+                </div>
+              </li>
+              <li class="sidebar__item">
+                <div class="sidebar__wrap">
+                  <a href="#" type="button" class="sidebar__link">Чугунный казан, сковорода и горшки для запекания</a>
+                  <button type="button" class="sidebar__btn">
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                      <path d="M6.58594 13L12.2428 7.34315L6.58594 1.68629" stroke-width="2"></path>
+                    </svg>
+                  </button>
+                </div>
                 <div class="sidebar__drop">
                   <a href="#">Комплект №1</a>
                   <a href="#">Комплект №2</a>
@@ -500,5 +510,14 @@
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   <script src="js/jquery.ui.touch-punch.min.js"></script>
   <script src="js/catalog-slider.js"></script>
+  <script src="js/range-slider.js"></script>
+  
+  <!-- Sidebar nav -->
+  <script>
+    $('.sidebar__btn').click(function() {
+      $(this).parent().next().slideToggle();
+      $(this).toggleClass('sidebar__btn--opened');
+    })
+  </script>
 </body>
 </html>
