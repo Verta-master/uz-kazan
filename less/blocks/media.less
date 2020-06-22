@@ -166,6 +166,16 @@
   .catalog__item {
     margin-right: 0;
   }
+  .contacts__field {
+    width: 100%;
+  }
+  .contacts__form {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 120px;
+    top: 0;
+  }
 }
 
 @media (max-width: 1022px) {
@@ -365,6 +375,7 @@
   .header__wrap {
     flex-wrap: wrap;
   }
+  .form__btn,
   .tabs__name,
   .logo {
     width: 100%;
@@ -411,5 +422,22 @@
     display: block;
     margin-top: 10px;
     margin-left: 0;
+  }
+  .form__line,
+  .contacts__name {
+    display: block;
+  }
+  .contacts__icon--phones a,
+  .contacts__icon--phones,
+  .contacts__icon--time {
+    display: block;
+    margin-right: 0;
+  }
+  .contacts__icon--phones::before {
+    top: 2px;
+  }
+  .form__comment {
+    width: 100%;
+    text-align: center;
   }
 }
