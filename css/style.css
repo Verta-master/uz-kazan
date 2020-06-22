@@ -1987,6 +1987,7 @@ h5,
   padding-top: 23px;
   padding-bottom: 26px;
   margin-bottom: 45px;
+  background-color: #F5F2E9;
 }
 .breadcrumbs__link {
   font-weight: 600;
@@ -2713,6 +2714,16 @@ span.pages__link {
   .catalog__item {
     margin-right: 0;
   }
+  .contacts__field {
+    width: 100%;
+  }
+  .contacts__form {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 120px;
+    top: 0;
+  }
 }
 @media (max-width: 1022px) {
   .category__next,
@@ -2921,6 +2932,7 @@ span.pages__link {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
+  .form__btn,
   .tabs__name,
   .logo {
     width: 100%;
@@ -2975,5 +2987,22 @@ span.pages__link {
     display: block;
     margin-top: 10px;
     margin-left: 0;
+  }
+  .form__line,
+  .contacts__name {
+    display: block;
+  }
+  .contacts__icon--phones a,
+  .contacts__icon--phones,
+  .contacts__icon--time {
+    display: block;
+    margin-right: 0;
+  }
+  .contacts__icon--phones::before {
+    top: 2px;
+  }
+  .form__comment {
+    width: 100%;
+    text-align: center;
   }
 }
