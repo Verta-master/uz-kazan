@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="robots" content="noindex">
+  <meta  name="viewport" content="width=device-width,initial-scale=1">
+  <title>Title</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Merriweather:ital,wght@0,700;1,700;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.1/jquery.fancybox.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css">
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+  <header class="header">
+    <div class="wrapper header__wrap">
+      <a href="#" class="logo">
+        <img src="img/images/logo.png" alt="Logo">
+        <div class="logo__text">
+          <strong>Узбекский Казан</strong>
+          <span>Национальные узбекские товары</span>
+        </div>
+      </a>
+      <form action="#" class="search">
+        <input type="text" class="search__input" placeholder="Поиск">
+        <button type="submit" class="search__btn">
+          <svg width="28" height="29" viewBox="0 0 28 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g opacity="0.8">
+              <circle cx="11.2929" cy="11.728" r="6.7634" transform="rotate(-45 11.2929 11.728)" stroke-width="2"/>
+              <path d="M20.0711 20.5063L22.1924 22.6277" stroke-width="3" stroke-linecap="round"/>
+            </g>
+          </svg>
+        </button>
+      </form>
+      <div class="header__contacts">
+        <div class="header__block">
+          <a href="tel:+74952208693" class="header__phone header__phone--mobile">+7 (495) 220-86-93</a>
+          <a href="#" class="header__city">Москва</a>
+        </div>
+        <div class="header__block">
+          <a href="tel:+78003014651" class="header__phone">8 (800) 301-46-51</a>
+          <a data-fancybox data-src="#call" href="javascript:;" class="header__call">Заказать звонок</a>
+        </div>
+      </div>
+      <a href="#" class="header__basket">
+        <div class="header__icon">
+          <svg width="28" height="28" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
+            <path d="M8.46734 22.4C6.91499 22.4 5.64489 23.66 5.64489 25.2C5.64489 26.74 6.91499 28 8.46734 28C10.0197 28 11.2898 26.74 11.2898 25.2C11.2898 23.66 10.0197 22.4 8.46734 22.4ZM0 0V2.8H2.82245L7.90285 13.44L5.92713 16.94C5.64489 17.36 5.50376 17.78 5.50376 18.34C5.50376 19.88 6.77386 21.14 8.3262 21.14H25.2609V18.34H8.89071C8.74958 18.34 8.46734 18.2 8.46734 17.92V17.78L9.73743 15.54H20.1805C21.3095 15.54 22.1562 14.98 22.7207 14.14L27.8011 5.04001C28.2244 4.34001 27.9422 3.50002 27.2366 3.08002C27.0955 2.94002 26.8132 2.94001 26.531 2.94001H5.64489L4.3748 0.140009H0V0ZM22.5796 22.4C21.0272 22.4 19.7571 23.66 19.7571 25.2C19.7571 26.74 21.0272 28 22.5796 28C24.1319 28 25.402 26.74 25.402 25.2C25.402 23.66 24.1319 22.4 22.5796 22.4Z"/>
+          </svg>
+          <span class="header__number">12</span>
+        </div>
+        <div class="header__price">
+          <b>Корзина</b>
+          <span>12 495р.</span>
+        </div>
+      </a>
+    </div>
+  </header>
+  <nav class="menu">
+    <div class="wrapper menu__wrap">
+      <div class="nav">
+        <button type="button" class="nav__btn">Каталог  товаров</button>
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a href="#" class="nav__link">Узбекские чугунные казаны из Намангана</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">Афганские казаны</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">Чугунный казан, сковорода и горшки для запекания</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">Комплекты: Узбекские чугунные казаны с печкой</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">Печи, очаг для казана</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">Ташкентский фарфор "Пахта"</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">Посуда, ручная работа, из города Риштан</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">Узбекские ножи (пчак) из города Чуст</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">Узбекские национальные ткани и одежда</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">Продукты из Узбекистана (рис, специи и сладости)</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">Аксессуары</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">Мангалы</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">Тандыр и инструменты для выпечки</a>
+          </li>
+        </ul>
+      </div>
+      <button type="button" class="menu__btn"></button>
+      <ul class="menu__list">
+        <li class="menu__item">
+          <a href="#" class="menu__link">О нас</a>
+        </li>
+        <li class="menu__item">
+          <a href="#" class="menu__link">Каталог</a>
+        </li>
+        <li class="menu__item">
+          <a href="#" class="menu__link">Оплата</a>
+        </li>
+        <li class="menu__item">
+          <a href="#" class="menu__link">Cертификаты</a>
+        </li>
+        <li class="menu__item">
+          <a href="#" class="menu__link">Доставка</a>
+        </li>
+        <li class="menu__item">
+          <a href="#" class="menu__link">Информация</a>
+        </li>
+        <li class="menu__item">
+          <a href="#" class="menu__link">Товары в аренду</a>
+        </li>
+        <li class="menu__item menu__item--active">
+          <a href="#" class="menu__link">Контакты</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  
+  <main>
+    <nav class="breadcrumbs">
+      <div class="wrapper">
+        <a href="#" class="breadcrumbs__link">Главная</a>
+        <a href="#" class="breadcrumbs__link">Каталог</a>
+        <span class="breadcrumbs__link">Узбекский нож «Пчак» №116</span>
+      </div>
+    </nav>
+    
+    <div class="contacts" id="tabs">
+      <div class="wrapper">
+        <h1 class="title">Наши контакты</h1>
+        <ul class="contacts__title">
+          <li class="contacts__name"><a href="#tabs-1">г. Москва ул. Часовая 11/3</a></li>
+          <li class="contacts__name"><a href="#tabs-2">г. Москва ул Маршила Катукова</a></li>
+          <li class="contacts__name"><a href="#tabs-3">г. Красногорск, ул. Ленина</a></li>
+          <li class="contacts__name"><a href="#tabs-4">г. Красногорск, ул. Ленина</a></li>
+          <li class="contacts__name"><a href="#tabs-5">г. Дедовск</a></li>
+        </ul>
+        <div class="contacts__output">
+          <div class="contacts__field" id="tabs-1">
+            <p class="contacts__address">г. Москва ул. Часовая 11/3</p>
+            <address class="contacts__icon contacts__icon--location">г. Москва ул. Часовая дом 11/3 строение 1 (Центральный склад) метро Аэропорт, Ленинградский рынок</address>
+            <span class="contacts__icon contacts__icon--time">Режим работы: с 08:00 до 20:00</span>
+            <div class="contacts__icon contacts__icon--phones">
+              <a href="tel:+79251937212">+7 (925) 193-72-12</a>
+              <a href="tel:+74952208693">+7 (495) 220-86-93</a>
+            </div>
+            <div class="contacts__map">
+              <iframe src="https://yandex.com/map-widget/v1/-/CCQhiEDphA"></iframe>
+            </div>
+          </div>
+          <div class="contacts__field" id="tabs-2">
+            <p class="contacts__address">г. Москва ул Маршила Катукова</p>
+            <address class="contacts__icon contacts__icon--location">г. Москва</address>
+            <span class="contacts__icon contacts__icon--time">Режим работы: с 08:00 до 20:00</span>
+            <div class="contacts__icon contacts__icon--phones">
+              <a href="tel:+79251937212">+7 (925) 193-72-12</a>
+              <a href="tel:+74952208693">+7 (495) 220-86-93</a>
+            </div>
+            <div class="contacts__map"></div>
+          </div>
+          <div class="contacts__field" id="tabs-3">
+            <p class="contacts__address">г. Красногорск, ул. Ленина</p>
+            <address class="contacts__icon contacts__icon--location">г. Красногорск</address>
+            <span class="contacts__icon contacts__icon--time">Режим работы: с 08:00 до 20:00</span>
+            <div class="contacts__icon contacts__icon--phones">
+              <a href="tel:+79251937212">+7 (925) 193-72-12</a>
+              <a href="tel:+74952208693">+7 (495) 220-86-93</a>
+            </div>
+            <div class="contacts__map"></div>
+          </div>
+          <div class="contacts__field" id="tabs-4">
+            <p class="contacts__address">г. Красногорск, ул. Ленина</p>
+            <address class="contacts__icon contacts__icon--location">г. Красногорск</address>
+            <span class="contacts__icon contacts__icon--time">Режим работы: с 08:00 до 20:00</span>
+            <div class="contacts__icon contacts__icon--phones">
+              <a href="tel:+79251937212">+7 (925) 193-72-12</a>
+              <a href="tel:+74952208693">+7 (495) 220-86-93</a>
+            </div>
+            <div class="contacts__map"></div>
+          </div>
+          <div class="contacts__field" id="tabs-5">
+            <p class="contacts__address">г. Дедовск</p>
+            <address class="contacts__icon contacts__icon--location">г. Дедовск</address>
+            <span class="contacts__icon contacts__icon--time">Режим работы: с 08:00 до 20:00</span>
+            <div class="contacts__icon contacts__icon--phones">
+              <a href="tel:+79251937212">+7 (925) 193-72-12</a>
+              <a href="tel:+74952208693">+7 (495) 220-86-93</a>
+            </div>
+            <div class="contacts__map"></div>
+          </div>
+          <div class="contacts__form">
+            <form action="#" class="form">
+              <p class="form__title">Остались вопросы? <span>Пишите!</span></p>
+              <label for="name" class="form__label">Ваше имя</label>
+              <div class="form__field form__field--required">
+                <input type="text" id="name" class="form__input" required>
+              </div>
+              <label for="email" class="form__label">Ваш E-mail</label>
+              <div class="form__field form__field--required">
+                <input type="email" id="email" class="form__input" required>
+              </div>
+              <label for="tel" class="form__label">Ваш телефон</label>
+              <div class="form__field form__field--required">
+                <input type="tel" id="tel" class="form__input" required>
+              </div>
+              <label for="message" class="form__label">Ваше сообщение</label>
+              <textarea id="message" class="form__message"></textarea>
+              <input type="checkbox" id="checkbox" class="form__checkbox" checked>
+              <label for="checkbox" class="form__checkbox-label">Я не робот</label>
+              <div class="form__line">
+                <button type="submit" class="btn form__btn">Отправить</button>
+                <p class="form__comment">Отправляя форму, я даю согласие на обработку <a href="#">персональных данных.</a></p>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  
+  <footer class="footer">
+    <div class="footer__logo">
+      <div class="wrapper">
+        <img src="img/images/logo.png" alt="Logo">
+        <strong>Узбекский Казан</strong>
+        <span>Национальные узбекские<br>товары</span>
+      </div>
+    </div>
+    <nav class="footer__menu">
+      <div class="wrapper">
+        <button type="button" class="footer__btn"></button>
+        <ul class="footer__list">
+          <li><a href="#">О нас</a></li>
+          <li><a href="#">Каталог</a></li>
+          <li><a href="#">Оплата</a></li>
+          <li><a href="#">Cертификаты</a></li>
+          <li><a href="#">Доставка</a></li>
+          <li><a href="#">Информация</a></li>
+          <li><a href="#">Товары в аренду</a></li>
+          <li><a href="#">Контакты</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="footer__contacts">
+      <div class="wrapper">
+        <div class="footer__block footer__block--phone">
+          <b>Телефоны</b>
+          <a href="tel:+74952208693">+7 (495) 220-86-93</a>
+          <a href="tel:+78003014651">8 (800) 301-46-51</a>
+        </div>
+        <div class="footer__block footer__block--address">
+          <b>Адрес</b>
+          <address>г. Москва ул. Часовая дом 11/3<br>строение 1</address>
+        </div>
+        <div class="footer__block footer__block--mail">
+          <b>Email</b>
+          <a href="mailto:uz-kazan@mail.ru">uz-kazan@mail.ru</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <div class="wrapper">
+        <span>2009 - 2020 гг. — Интернет-магазин "Уз Казан"</span>
+        <a href="#">Политика конфеденциальности</a>
+        <p>Продвижение сайта — <a href="#">Seo-Mark.ru</a></p>
+      </div>
+    </div>
+  </footer>
+  
+  <div class="mobile-footer">
+    <a href="tel:+7(495)220-86-93">Позвонить</a>
+    <a href="https://wa.me/79651602402">Написать <img src="img/icons/watsapp.svg" alt="Написать"></a>
+  </div>
+  
+  <!-- Modal window -->
+  <div style="display: none;" id="call" class="modal">
+    <form action="#" class="form">
+      <p class="form__title">Заказать звонок</p>
+      <label for="name" class="form__label">Ваше имя</label>
+      <div class="form__field form__field--required">
+        <input type="text" id="name" class="form__input" required>
+      </div>
+      <label for="email" class="form__label">Ваш E-mail</label>
+      <div class="form__field form__field--required">
+        <input type="email" id="email" class="form__input" required>
+      </div>
+      <label for="tel" class="form__label">Ваш телефон</label>
+      <div class="form__field form__field--required">
+        <input type="tel" id="tel" class="form__input" required>
+      </div>
+      <label for="message" class="form__label">Ваше сообщение</label>
+      <textarea id="message" class="form__message"></textarea>
+      <input type="checkbox" id="checkbox" class="form__checkbox" checked>
+      <label for="checkbox" class="form__checkbox-label">Я не робот</label>
+      <div class="form__line">
+        <button type="submit" class="btn form__btn">Отправить</button>
+        <p class="form__comment">Отправляя форму, я даю согласие на обработку <a href="#">персональных данных.</a></p>
+      </div>
+    </form>
+  </div>
+  
+  <script src="js/jquery-3.2.1.min.js"></script>
+  <script src="js/script.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.1/jquery.fancybox.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  
+  <!-- Tabs -->
+  <script>
+    $(function() {
+      $("#tabs").tabs();
+    });
+  </script>
+</body>
+</html>
