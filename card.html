@@ -486,6 +486,14 @@
       freeMode: true,
       watchSlidesVisibility: true,
       watchSlidesProgress: true,
+      breakpoints: {
+        766: {
+          slidesPerView: 3,
+        },
+        480: {
+          slidesPerView: 2,
+        }
+      }
     });
     
     var galleryTop = new Swiper('.gallery-top', {
@@ -510,6 +518,20 @@
       preventClicksPropagation: false,
       slidesPerView: 3,
       spaceBetween: 15,
+      breakpoints: {
+        1200: {
+          direction: 'horizontal',
+          slidesPerView: 3,
+        },
+        1022: {
+          direction: 'horizontal',
+          slidesPerView: 2,
+        },
+        480: {
+          direction: 'horizontal',
+          slidesPerView: 1,
+        }
+      }
     });
   </script>
 </body>
