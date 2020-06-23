@@ -2,6 +2,8 @@
   overflow: hidden;
   
   h1.title {
+    margin-top: 0;
+    margin-bottom: 33px;
     text-align: left;
   }
   
@@ -14,16 +16,18 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  margin-bottom: 30px;
+  margin-bottom: 18px;
 }
 
 .card__slider {
   width: 770px;
+  max-width: 100%;
 }
 
 .card__info {
   position: relative;
   width: 370px;
+  max-width: 100%;
   
   &::before {
     content: "";
@@ -47,7 +51,7 @@
 .card__presence {
   position: absolute;
   z-index: 10;
-  top: 29px;
+  top: 22px;
   right: 24px;
   padding-right: 30px;
   font-weight: 600;
@@ -96,15 +100,20 @@
 }
 
 .card__slide {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   height: 440px;
   padding: 20px;
   box-sizing: border-box;
   background-color: #FFFFFF;
   border-radius: 20px;
   overflow: hidden;
+  
+  a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
   
   img {
     display: block;
@@ -128,6 +137,7 @@
   padding: 5px;
   background-color: #FFFFFF;
   border-radius: 20px;
+  border: 2px solid #fff;
   overflow: hidden;
   
   img {
@@ -135,6 +145,10 @@
     flex: 0 0 auto;
     max-height: 100%;
   }
+}
+
+.gallery-thumbs .swiper-slide-thumb-active {
+  border-color: #98ACB3;
 }
 
 .card__prev,
@@ -150,13 +164,14 @@
 }
 
 .card__block-wrap {
-  padding: 10px 30px;
+  padding: 12px 30px;
   padding-bottom: 34px;
 }
 
 .card__price {
   margin: 0;
   padding: 40px 30px;
+  padding-bottom: 33px;
   font-weight: 800;
   font-size: 36px;
   line-height: 1;
@@ -183,10 +198,12 @@
 
 .card__click {
   width: 100%;
+  height: 48px;
   margin-top: 11px;
   font-weight: 700;
   font-size: 18px;
   background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.15) 0%, rgba(255,255,255,0.5) 46.1%, rgba(255, 255, 255, 0.15) 100%);
+  border-radius: 24px;
   
   &::before {
     display: none;
@@ -195,7 +212,9 @@
 
 .card__buy {
   width: 100%;
+  height: 48px;
   margin-top: 28px;
+  border-radius: 24px;
 }
 
 .card__line {
