@@ -3014,6 +3014,10 @@ span.pages__link {
   -webkit-transition: ease-out 0.3s;
   transition: ease-out 0.3s;
 }
+.basket {
+  overflow: hidden;
+  margin-bottom: 40px;
+}
 .basket h1.title {
   margin-top: 0;
   margin-bottom: 30px;
@@ -3217,6 +3221,28 @@ span.pages__link {
 }
 .basket__btn {
   margin-top: 38px;
+}
+.related {
+  margin-bottom: 40px;
+  overflow: hidden;
+}
+.related .title {
+  text-align: left;
+}
+.related__prev {
+  top: 45%;
+  left: -25px;
+}
+.related__next {
+  top: 45%;
+  right: -25px;
+}
+.related__slider {
+  padding-left: 30px;
+  margin-left: -30px;
+  padding-top: 20px;
+  padding-right: 30px;
+  margin-right: -30px;
 }
 @media (max-width: 1200px) {
   .wrapper {

@@ -336,6 +336,105 @@
         </div>
       </div>
     </section>
+    
+    <section class="related">
+      <div class="wrapper">
+        <p class="title">С этим товаром покупают</p>
+        <div class="catalog">
+          <div class="swiper-container related__slider">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide catalog__slide">
+                <div class="catalog__labels">
+                  <div class="catalog__label catalog__label--hit">Хит</div>
+                </div>
+                <a href="#" class="catalog__link">
+                  <figure class="catalog__img">
+                    <img src="img/images/item-1.jpg" alt="Казан чугунный">
+                  </figure>
+                  <p class="title-5">Казан чугунный — 12 литров (дно круглое)</p>
+                </a>
+                <form action="#" class="catalog__form">
+                  <div class="catalog__wrap">
+                    <p class="catalog__price">35 000р.</p>
+                    <a href="#" class="btn catalog__btn">В корзину</a>
+                  </div>
+                </form>
+              </div>
+              <div class="swiper-slide catalog__slide">
+                <div class="catalog__labels">
+                  <div class="catalog__label catalog__label--hit">Хит</div>
+                </div>
+                <a href="#" class="catalog__link">
+                  <figure class="catalog__img">
+                    <img src="img/images/item-2.jpg" alt="Казан чугунный">
+                  </figure>
+                  <p class="title-5">Казан чугунный — 12 литров (дно круглое)</p>
+                </a>
+                <form action="#" class="catalog__form">
+                  <div class="catalog__wrap">
+                    <p class="catalog__price">35 000р.</p>
+                    <a href="#" class="btn catalog__btn">В корзину</a>
+                  </div>
+                </form>
+              </div>
+              <div class="swiper-slide catalog__slide">
+                <div class="catalog__labels">
+                  <div class="catalog__label catalog__label--hit">Хит</div>
+                </div>
+                <a href="#" class="catalog__link">
+                  <figure class="catalog__img">
+                    <img src="img/images/item-3.jpg" alt="Казан чугунный">
+                  </figure>
+                  <p class="title-5">Казан чугунный — 12 литров (дно круглое)</p>
+                </a>
+                <form action="#" class="catalog__form">
+                  <div class="catalog__wrap">
+                    <p class="catalog__price">35 000р.</p>
+                    <a href="#" class="btn catalog__btn">В корзину</a>
+                  </div>
+                </form>
+              </div>
+              <div class="swiper-slide catalog__slide">
+                <div class="catalog__labels">
+                  <div class="catalog__label catalog__label--hit">Хит</div>
+                </div>
+                <a href="#" class="catalog__link">
+                  <figure class="catalog__img">
+                    <img src="img/images/item-4.jpg" alt="Казан чугунный">
+                  </figure>
+                  <p class="title-5">Казан чугунный — 12 литров (дно круглое)</p>
+                </a>
+                <form action="#" class="catalog__form">
+                  <div class="catalog__wrap">
+                    <p class="catalog__price">35 000р.</p>
+                    <a href="#" class="btn catalog__btn">В корзину</a>
+                  </div>
+                </form>
+              </div>
+              <div class="swiper-slide catalog__slide">
+                <div class="catalog__labels">
+                  <div class="catalog__label catalog__label--hit">Хит</div>
+                </div>
+                <a href="#" class="catalog__link">
+                  <figure class="catalog__img">
+                    <img src="img/images/item-4.jpg" alt="Казан чугунный">
+                  </figure>
+                  <p class="title-5">Казан чугунный — 12 литров (дно круглое)</p>
+                </a>
+                <form action="#" class="catalog__form">
+                  <div class="catalog__wrap">
+                    <p class="catalog__price">35 000р.</p>
+                    <a href="#" class="btn catalog__btn">В корзину</a>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-button-prev related__prev"></div>
+          <div class="swiper-button-next related__next"></div>
+        </div>
+      </div>
+    </section>
   </main>
   
   <footer class="footer">
@@ -423,5 +522,31 @@
   <script src="js/script.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.1/jquery.fancybox.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
+  
+  <!-- Slider -->
+  <script>
+    var mySwiper = new Swiper ('.related__slider', {
+      navigation: {
+        nextEl: '.related__next',
+        prevEl: '.related__prev',
+      },
+      simulateTouch: false,
+      preventClicks: false,
+      preventClicksPropagation: false,
+      slidesPerView: 4,
+      spaceBetween: 30,
+      breakpoints: {
+        1200: {
+          slidesPerView: 3,
+        },
+        1022: {
+          slidesPerView: 2,
+        },
+        480: {
+          slidesPerView: 1,
+        }
+      }
+    });
+  </script>
 </body>
 </html>
