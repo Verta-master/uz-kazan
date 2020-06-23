@@ -1,4 +1,6 @@
 .card {
+  overflow: hidden;
+  
   h1.title {
     text-align: left;
   }
@@ -12,7 +14,7 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 
 .card__slider {
@@ -22,6 +24,20 @@
 .card__info {
   position: relative;
   width: 370px;
+  
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 57px;
+    left: -70px;
+    width: 608px;
+    height: 473px;
+    background-image: url(../img/icons/deco-circle.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    opacity: 0.2;
+  }
 }
 
 .card__pic {
@@ -125,4 +141,108 @@
 .card__next {
   background-color: rgba(255,255,255,0);
   box-shadow: none;
+}
+
+.card__block {
+  margin-bottom: 20px;
+  background-color: #FFFFFF;
+  border-radius: 20px;
+}
+
+.card__block-wrap {
+  padding: 10px 30px;
+  padding-bottom: 34px;
+}
+
+.card__price {
+  margin: 0;
+  padding: 40px 30px;
+  font-weight: 800;
+  font-size: 36px;
+  line-height: 1;
+  border: 1px solid rgba(152,172,179,0.1);
+}
+
+.card__category {
+  margin-top: 0;
+  margin-bottom: 11px;
+  font-size: 14px;
+  line-height: 18px;
+  
+  a {
+    display: block;
+    color: @yellow;
+    text-decoration: underline;
+    
+    &:hover,
+    &:active {
+      text-decoration: none;
+    }
+  }
+}
+
+.card__click {
+  width: 100%;
+  margin-top: 11px;
+  font-weight: 700;
+  font-size: 18px;
+  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.15) 0%, rgba(255,255,255,0.5) 46.1%, rgba(255, 255, 255, 0.15) 100%);
+  
+  &::before {
+    display: none;
+  }
+}
+
+.card__buy {
+  width: 100%;
+  margin-top: 28px;
+}
+
+.card__line {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 25px;
+}
+
+.card__number {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #FAFAFA;
+  border: 1px solid rgba(152, 172, 179, 0.3);
+  border-radius: 20px;
+}
+
+.card__num {
+  width: 40px;
+  height: 40px;
+  color: #fff;
+  font-size: 30px;
+  font-weight: 700;
+  text-align: center;
+  line-height: 40px;
+  background: #98ACB3;
+  border-radius: 21px;
+  .transition();
+  
+  &:hover,
+  &:active {
+    opacity: 0.7;
+    .transition();
+  }
+}
+
+.card__value {
+  width: 120px;
+  height: 40px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 18px;
+  background-color: rgba(255,255,255,0);
+}
+
+.card__social {
+  padding: 20px;
+  padding-top: 15px;
 }
