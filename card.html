@@ -217,9 +217,9 @@
                   <div class="card__line">
                     <b>Количество</b>
                     <div class="card__number">
-                      <button type="button" class="card__num card__num--minus"></button>
+                      <button type="button" class="card__num card__num--minus">&minus;</button>
                       <input type="text" class="card__value" value="10">
-                      <button type="button" class="card__num card__num--plus"></button>
+                      <button type="button" class="card__num card__num--plus">&plus;</button>
                     </div>
                   </div>
                   <a href="#" class="btn btn--grey card__buy">Добавить в корзину</a>
@@ -228,7 +228,7 @@
               </form>
             </div>
             <div class="card__block">
-              <div class="card__block-wrap">
+              <div class="card__social">
                 <div class="social">
                   <b>Поделиться</b>
                   <ul class="social__list">
@@ -257,7 +257,7 @@
     </section>
     
     <section class="product">
-      <div class="wrapper wrapper__columns">
+      <div class="wrapper wrapper__card">
         <div class="product__block">
           <p class="title">Описание</p>
           <p>Настоящий казан из Намангана на 3,5 литра станет лучшим дополнением любой кухни. Благодаря плоскому дну его можно ставить на обычную плиту. Казан выполнен из чугуна толщиной 8 мм, благодаря чему он будет хорошо удерживать тепло, а еда во время приготовления сохранит сочность и вкусовые характеристики.</p>
@@ -310,7 +310,83 @@
         </div>
         
         <aside class="product__aside">
-          
+          <p class="product__title">Похожие товары</p>
+          <div class="catalog">
+            <div class="swiper-container product__slider">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide catalog__slide">
+                  <div class="catalog__labels">
+                    <div class="catalog__label catalog__label--hit">Хит</div>
+                  </div>
+                  <a href="#" class="catalog__link">
+                    <figure class="catalog__img">
+                      <img src="img/images/item-1.jpg" alt="Казан чугунный">
+                    </figure>
+                    <p class="title-5">Казан чугунный — 12 литров (дно круглое)</p>
+                  </a>
+                  <form action="#" class="catalog__form">
+                    <div class="catalog__wrap">
+                      <p class="catalog__price">35 000р.</p>
+                      <a href="#" class="btn catalog__btn">В корзину</a>
+                    </div>
+                  </form>
+                </div>
+                <div class="swiper-slide catalog__slide">
+                  <div class="catalog__labels">
+                    <div class="catalog__label catalog__label--hit">Хит</div>
+                  </div>
+                  <a href="#" class="catalog__link">
+                    <figure class="catalog__img">
+                      <img src="img/images/item-2.jpg" alt="Казан чугунный">
+                    </figure>
+                    <p class="title-5">Казан чугунный — 12 литров (дно круглое)</p>
+                  </a>
+                  <form action="#" class="catalog__form">
+                    <div class="catalog__wrap">
+                      <p class="catalog__price">35 000р.</p>
+                      <a href="#" class="btn catalog__btn">В корзину</a>
+                    </div>
+                  </form>
+                </div>
+                <div class="swiper-slide catalog__slide">
+                  <div class="catalog__labels">
+                    <div class="catalog__label catalog__label--hit">Хит</div>
+                  </div>
+                  <a href="#" class="catalog__link">
+                    <figure class="catalog__img">
+                      <img src="img/images/item-3.jpg" alt="Казан чугунный">
+                    </figure>
+                    <p class="title-5">Казан чугунный — 12 литров (дно круглое)</p>
+                  </a>
+                  <form action="#" class="catalog__form">
+                    <div class="catalog__wrap">
+                      <p class="catalog__price">35 000р.</p>
+                      <a href="#" class="btn catalog__btn">В корзину</a>
+                    </div>
+                  </form>
+                </div>
+                <div class="swiper-slide catalog__slide">
+                  <div class="catalog__labels">
+                    <div class="catalog__label catalog__label--hit">Хит</div>
+                  </div>
+                  <a href="#" class="catalog__link">
+                    <figure class="catalog__img">
+                      <img src="img/images/item-4.jpg" alt="Казан чугунный">
+                    </figure>
+                    <p class="title-5">Казан чугунный — 12 литров (дно круглое)</p>
+                  </a>
+                  <form action="#" class="catalog__form">
+                    <div class="catalog__wrap">
+                      <p class="catalog__price">35 000р.</p>
+                      <a href="#" class="btn catalog__btn">В корзину</a>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-button-prev product__prev"></div>
+            <div class="swiper-button-next product__next"></div>
+          </div>
         </aside>
       </div>
     </section>
@@ -402,7 +478,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.1/jquery.fancybox.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
   
-  <!-- Gallety -->
+  <!-- Sliders -->
   <script>
     var galleryThumbs = new Swiper('.gallery-thumbs', {
       spaceBetween: 15,
@@ -411,6 +487,7 @@
       watchSlidesVisibility: true,
       watchSlidesProgress: true,
     });
+    
     var galleryTop = new Swiper('.gallery-top', {
       navigation: {
         nextEl: '.card__next',
@@ -420,6 +497,19 @@
       thumbs: {
         swiper: galleryThumbs
       }
+    });
+    
+    var mySwiper = new Swiper ('.product__slider', {
+      navigation: {
+        nextEl: '.product__next',
+        prevEl: '.product__prev',
+      },
+      direction: 'vertical',
+      simulateTouch: false,
+      preventClicks: false,
+      preventClicksPropagation: false,
+      slidesPerView: 3,
+      spaceBetween: 15,
     });
   </script>
 </body>
