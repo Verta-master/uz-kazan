@@ -123,10 +123,12 @@
   .promo__pagination {
     left: 65px;
   }
+  .related__prev,
   .catalog__prev,
   .promo__prev {
     left: 5px;
   }
+  .related__next,
   .catalog__next,
   .promo__next {
     right: 5px;
@@ -204,6 +206,22 @@
     right: 5px;
     left: auto;
     transform: none;
+  }
+  .basket__total {
+    position: relative;
+    top: 0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+    
+    &::before {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+  .basket__block,
+  .basket__table {
+    width: 100%;
   }
 }
 
@@ -338,6 +356,12 @@
   .sidebar__block {
     display: none;
   }
+  .basket__table .basket__title {
+    padding: 10px;
+  }
+  .basket__table td:last-child {
+    width: 50px;
+  }
 }
 
 @media (max-width: 766px) {
@@ -404,6 +428,48 @@
   }
   .product table td:first-child {
     width: 50%;
+  }
+  .basket__field {
+    width: 100%;
+    margin-right: 0;
+  }
+  .basket__line {
+    margin-right: 0;
+  }
+  .basket__table,
+  .basket__table tbody,
+  .basket__table td {
+    display: block;
+  }
+  .basket__table tr {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 15px;
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+  }
+  .basket__img {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .basket__title {
+    width: 100%;
+    text-align: center;
+  }
+  .basket__table td {
+    height: auto;
+    position: static;
+  }
+  .basket__table td:last-child {
+    width: 0;
+  }
+  .basket__price {
+    width: auto;
   }
 }
 
@@ -494,5 +560,18 @@
   }
   .card__wrap {
     margin-bottom: 0;
+  }
+  .basket__number {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+  }
+  .basket__price {
+    width: 100%;
+    text-align: center;
+  }
+  .basket__total {
+    width: 100%;
+    margin-bottom: 15px;
   }
 }

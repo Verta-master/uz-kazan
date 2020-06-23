@@ -1,10 +1,10 @@
 .basket {
   overflow: hidden;
-  margin-bottom: 40px;
+  margin-bottom: 15px;
   
   h1.title {
     margin-top: 0;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     text-align: left;
   }
 }
@@ -23,6 +23,7 @@
   td {
     position: relative;
     height: 120px;
+    padding: 0;
     background-color: #fff;
     overflow: hidden;
   }
@@ -35,17 +36,26 @@
     width: 75px;
     border-radius: 0 20px 20px 0;
   }
+  
+  .basket__title {
+    padding: 10px 20px;
+    padding-right: 50px;
+  }
 }
 
 .basket__img {
   width: 178px;
   height: 120px;
   text-align: center;
+  
+  img {
+    display: block;
+    max-height: 120px;
+    width: auto;
+  }
 }
 
 .basket__title {
-  padding: 20px;
-  padding-right: 50px;
   font-weight: bold;
   font-size: 16px;
   line-height: 1.3;
@@ -79,8 +89,8 @@
 
 .basket__remove {
   position: absolute;
-  top: 5px;
-  right: 5px;
+  top: 10px;
+  right: 10px;
   width: 30px;
   height: 30px;
   background-image: url(../img/icons/cross.svg);
@@ -120,7 +130,7 @@
 
 .basket__itogo {
   margin: 0;
-  padding: 30px 20px;
+  padding: 32px 20px;
   display: flex;
   justify-content: space-between;
   align-items: baseline;
@@ -164,12 +174,12 @@
   
   b {
     display: block;
-    margin-bottom: 14px;
+    margin-bottom: 10px;
     font-size: 18px;
   }
   
   .form__radio-wrap {
-    margin-bottom: 10px;
+    padding-bottom: 10px;
   }
   
   .form__radio-label {
@@ -197,8 +207,8 @@
 .basket__block {
   width: 870px;
   max-width: 100%;
-  margin-bottom: 15px;
-  padding: 40px 30px;
+  margin-bottom: 14px;
+  padding: 29px 30px;
   background: #FFFFFF;
   border-radius: 20px;
 }
@@ -206,20 +216,22 @@
 .basket__subtitle {
   margin-top: 0;
   margin-bottom: 30px;
-  ont-weight: 800;
+  font-weight: 700;
   font-size: 24px;
   line-height: 1.2;
 }
 
 .basket__line {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-right: -30px;
 }
 
 .basket__field {
   position: relative;
-  width: 32%;
+  width: 30%;
   height: auto;
+  margin-right: 20px;
 }
 
 .basket__delivery {
@@ -228,5 +240,5 @@
 }
 
 .basket__btn {
-  margin-top: 38px;
+  margin-top: 30px;
 }
